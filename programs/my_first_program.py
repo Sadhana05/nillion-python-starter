@@ -6,7 +6,11 @@ def nada_main():
     my_int1 = SecretInteger(Input(name="my_int1", party=party1))
     my_int2 = SecretInteger(Input(name="my_int2", party=party1))
 
-    # write the computation for your program here - use my_int1 and my_int2 as inputs
-    # make sure you change the output below to be your new output
+    # Perform a computation using my_int1 and my_int2, e.g., multiplication
+    result = my_int1 * my_int2
 
-    return [Output(my_int1, "my_output", party1)]
+    # Return the result as output
+    return [Output(result, "product_output", party1)]
+
+
+create_new_nada_program_by_reference(nada_main)
